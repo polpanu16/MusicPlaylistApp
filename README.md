@@ -15,12 +15,13 @@ A Flutter-based music playlist application that allows users to listen to music 
 ## Demo
 
 Here are some GIFs showcasing the app's features:
+video https://youtu.be/5HBeYKqIKx0
 
-![Showcase1](assets/images/gif1.gif)
+![Showcase1](https://github.com/polpanu16/MusicPlaylistApp/blob/main/gif1.gif)
 
-![Showcase2](assets/images/gif2.gif)
+![Showcase2](https://github.com/polpanu16/MusicPlaylistApp/blob/main/gif2.gif)
 
-![Showcase3](assets/images/gif3.gif)
+![Showcase3](https://github.com/polpanu16/MusicPlaylistApp/blob/main/gif3.gif)
 
 ## Getting Started
 
