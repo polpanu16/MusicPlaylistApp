@@ -1,16 +1,40 @@
-# music_playlist_app
+# Music Playlist App
 
-A new Flutter project.
+A Flutter-based music playlist application that allows users to listen to music by categories. The app offers a smooth and interactive experience for browsing, managing, and playing music.
+
+## Features
+
+- **Categorize by Music Genre**: Easily browse music playlists organized by genre. Play entire albums directly from the playlist screen by pressing the play button for a specific category.
+
+- **Play Songs**: Enjoy seamless music playback with basic controls, including play, pause, and next.
+
+- **Song Progress Tracking**: A progress bar allows you to track the current song's progress and navigate through the track.
+
+- **Reorder Songs in the Playlist**: Rearrange the order of songs within an album by dragging and dropping them using the drag icon on the right side of each track.
+
+## Demo
+
+Here are some GIFs showcasing the app's features:
+
+![Showcase1](assets/images/gif1.gif)
+
+![Showcase2](assets/images/gif2.gif)
+
+![Showcase3](assets/images/gif3.gif)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Ensure that you have the following installed on your system:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (latest stable version)
+- [Android Studio](https://developer.android.com/studio) or [Xcode](https://developer.apple.com/xcode/) for iOS development
+- A device or emulator to run the app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/polpanu16/MusicPlaylistApp.git
+   cd music_playlist_app

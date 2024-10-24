@@ -19,7 +19,8 @@ class PlaylistManageScreen extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             forceMaterialTransparency: true,
-            title: const Text('My Playlist'),
+            title: const Text('My Playlist',
+                style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           body: SafeArea(
             child: BlocBuilder<PlaylistManageCubit, PlaylistManageState>(

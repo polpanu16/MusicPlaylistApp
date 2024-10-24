@@ -82,7 +82,6 @@ class GlobalAudioPlayerCubit extends Cubit<GlobalAudioPlayerState> {
       ..insert((oldIndex < newIndex) ? newIndex - 1 : newIndex,
           state.songs[oldIndex]);
 
-    print("$oldIndex to $newIndex");
     emit(state.copyWith(songs: newSongs));
   }
 
