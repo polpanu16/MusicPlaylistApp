@@ -1,7 +1,8 @@
+import 'package:music_playlist_app/core/enums/genre_type.dart';
 import 'package:music_playlist_app/playlist_manage/domain/entities/song_entity.dart';
 
 class SongModel extends SongEntity {
-  SongModel(
+  const SongModel(
       {required super.id,
       required super.title,
       required super.album,
@@ -20,7 +21,7 @@ class SongModel extends SongEntity {
       title: json['title'],
       album: json['album'],
       artist: json['artist'],
-      genre: json['genre'],
+      genre: genreTypeFromString(json['genre']),
       source: json['source'],
       image: json['image'],
       trackNumber: json['trackNumber'],
@@ -28,21 +29,5 @@ class SongModel extends SongEntity {
       duration: json['duration'],
       site: json['site'],
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'title': title,
-      'album': album,
-      'artist': artist,
-      'genre': genre,
-      'source': source,
-      'image': image,
-      'trackNumber': trackNumber,
-      'totalTrackCount': totalTrackCount,
-      'duration': duration,
-      'site': site,
-    };
   }
 }

@@ -1,11 +1,12 @@
 import 'package:equatable/equatable.dart';
+import 'package:music_playlist_app/core/enums/genre_type.dart';
 
 class SongEntity extends Equatable {
   final String id;
   final String title;
   final String album;
   final String artist;
-  final String genre;
+  final GenreType genre;
   final String source;
   final String image;
   final int trackNumber;
@@ -13,7 +14,7 @@ class SongEntity extends Equatable {
   final int duration;
   final String site;
 
-  SongEntity({
+  const SongEntity({
     required this.id,
     required this.title,
     required this.album,
@@ -26,13 +27,6 @@ class SongEntity extends Equatable {
     required this.duration,
     required this.site,
   });
-
-  // Method to get formatted duration (e.g., "1:30" for 90 seconds)
-  String getFormattedDuration() {
-    final minutes = (duration / 60).floor();
-    final seconds = duration % 60;
-    return '$minutes:${seconds.toString().padLeft(2, '0')}';
-  }
 
   // Method to get a brief description of the song
   String getDescription() {

@@ -21,7 +21,7 @@ abstract class BaseApiRepository {
       final response = await request();
 
       if (response.statusCode == HttpStatus.ok && response.data != null) {
-        return DataSuccess(response.data!);
+        return DataSuccess(response.data as T);
       } else {
         throw DioException(
           response: response,

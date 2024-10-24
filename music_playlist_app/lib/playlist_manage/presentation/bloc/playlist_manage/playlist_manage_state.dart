@@ -3,33 +3,25 @@ part of 'playlist_manage_cubit.dart';
 final class PlaylistManageState extends Equatable {
   final StateStatus stateStatus;
   final List<SongEntity> songs;
-  final SongEntity? selectedSong;
-  final AudioPlayer audioPlayer;
-  final bool isPause;
 
-  PlaylistManageState(
-      {this.stateStatus = StateStatus.init,
-      this.songs = const [],
-      this.selectedSong,
-      this.isPause = false,
-      AudioPlayer? audioPlayer})
-      : audioPlayer = audioPlayer ?? AudioPlayer();
+  const PlaylistManageState({
+    this.stateStatus = StateStatus.init,
+    this.songs = const [],
+  });
 
-  PlaylistManageState copyWith(
-      {StateStatus? stateStatus,
-      List<SongEntity>? songs,
-      SongEntity? selectedSong,
-      bool? isPause,
-      AudioPlayer? audioPlayer}) {
+  List<SongEntity> getSongsByType(GenreType type) =>
+      songs.where((song) => song.genre == type).toList();
+
+  PlaylistManageState copyWith({
+    StateStatus? stateStatus,
+    List<SongEntity>? songs,
+  }) {
     return PlaylistManageState(
-        stateStatus: stateStatus ?? this.stateStatus,
-        songs: songs ?? this.songs,
-        selectedSong: selectedSong ?? this.selectedSong,
-        isPause: isPause ?? this.isPause,
-        audioPlayer: this.audioPlayer);
+      stateStatus: stateStatus ?? this.stateStatus,
+      songs: songs ?? this.songs,
+    );
   }
 
   @override
-  List<Object?> get props =>
-      [stateStatus, songs, selectedSong, audioPlayer, isPause];
+  List<Object?> get props => [stateStatus, songs];
 }
